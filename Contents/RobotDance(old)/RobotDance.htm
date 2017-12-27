@@ -1,0 +1,124 @@
+﻿<!--
+//*****************************************************************************************
+// Contents Framework : Servie - Robot Dance Part.
+//                      Date : 2016.02.02
+//    (1)
+//          User Change : [Step 1]
+//					      [Step 2]
+//*****************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+<style>
+<!--
+body {margin:0;padding:0;}
+#visible
+{
+overflow: hidden;
+}
+-->
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+			var i=0;
+	setInterval(function(){	
+			    i++;
+				if(i>3){
+					
+					i=1;
+				}
+				document.pic.src="../../images/slider/" + i + ".png";	
+	}}
+	,3000);
+	//window.external.StartFaceTracking(True);
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+function JSMain()
+{
+	
+}
+
+function JSUnload()
+{
+	window.external.RobotDanceStart(false);
+	//HideAdMovie();
+}
+
+
+</script>
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; ">
+	<div class="header" style="background-color: white;">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 20px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" style="padding-top: 34px;width: 250px;" onclick="Setting()"></div>
+		
+	</div>
+
+	<div class="main">
+
+		<div class="contents">
+		
+			<script language="JavaScript" type="text/javascript">
+
+				AC_FL_RunContent(
+					'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0',
+					'width', '100%',
+					'height', '900',	//1920	// <-- 하단에 동영상이 플레이되면 1200, 동영상이 없으면, 1920
+					'src', 'RobotDance',	// <-- 여기에 Flash 파일명을 적어주세요.
+					'quality', 'high',
+					'pluginspage', 'http://www.adobe.com/go/getflashplayer_kr',
+					'align', 'middle',
+					'play', 'true',
+					'loop', 'false',
+					'scale', 'showall',
+					'wmode', 'transparent',
+					'devicefont', 'false',
+					'id', 'App',
+					'bgcolor', '#ffffff',
+					'name', 'App',
+					'menu', 'false',
+					'allowFullScreen', 'false',
+					'allowScriptAccess','always',
+					'movie', 'RobotDance',	// <-- 여기에 Flash 파일명을 적어주세요.
+					'salign', 'top'
+					); //end AC code
+			</script>
+		</div>
+	</div>
+
+<div class="footer" style="width: 1080px;">
+		<div id="slider">
+			 
+			   <img src="../../images/slider/1.png" name="pic" width="1080" >
+			</div>
+			
+
+	</div>
+
+</body>
+
+</html>

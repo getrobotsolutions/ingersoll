@@ -1,0 +1,261 @@
+﻿<!--
+//*****************************************************************************************
+// Contents Framework : Service - Human Follow Part.
+//                      Date : 2016.11.14
+//
+//    (1)
+//          User Change : [Step 1]
+//					      [Step 2]
+//*****************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	
+<link rel="stylesheet" type="text/css" href="RobotDance.css" />
+
+
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript"
+	src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript"
+	src="RobotDance.js"></script>
+
+
+	<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.view {
+	margin-top: 17px;
+	width: 260px;
+	height: 900px;
+	overflow: hidden;
+}
+
+.scrollBlind {
+	width: 460px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+ul {
+	width: 430px;
+}
+
+li {
+	height: 152px;
+	line-height: 0px;
+	text-align: center;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript">
+PlaySpeech("Pick your song and let's boogie.");
+	var i=0;
+	setInterval(function(){	
+			    i++;
+				if(i>3){
+					
+					i=1;
+				}
+				document.pic.src="../../images/slider/" + i + ".png";	
+	}
+	,3000);
+	//window.external.StartFaceTracking(True);
+	
+function JSMain()
+{
+}
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+//--------------------------------------------------------------------------
+//-- Flash -> html : Flash에서 선택한 Movie를 html에서 Play 
+//--------------------------------------------------------------------------
+/*
+function FC_ChangeAdMovieHtml(strIdx)
+{
+	var movieObj = document.getElementById('MediaPlayer');
+	if(strIdx == "1") movieObj.src = "../../Movie/main1.mp4";
+	if(strIdx == "2") movieObj.src = "../../Movie/main2.mp4";
+	if(strIdx == "3") movieObj.src = "../../Movie/main3.mp4";
+	if(strIdx == "4") movieObj.src = "../../Movie/main4.mp4";
+	movieObj.paly();
+}
+*/
+</script>
+</head>
+
+<body onload="JSMain()" onbeforeunload="JSUnload()">
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1720px; ">
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+	<div class="main2">
+
+		<div class="contents">
+
+	<div class="view" style="visibility: hidden;">
+		<div class="scrollBlind">
+			<ul>
+				<li>
+					<div class="select">
+						<img style="display:;" id="select01" src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_The-lazy-song.png" onclick="select(1)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select02" 
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_CHEER-UP.png" onclick="select(2)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select03"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_-I`m-Yours.png" onclick="select(3)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select04"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_TT.png" onclick="select(4)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select05"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_With-You.png" onclick="select(5)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select06"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_너그리고나.png" onclick="select(6)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select07"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_너무너무너무.png" onclick="select(7)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select08"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_시간을-달려서.png" onclick="select(8)">
+					</div>
+				</li>
+
+				<li>
+					<div class="select">
+						<img style="display: none;" id="select09"
+							src="Image/list_select.png">
+					</div>
+					<div class="list">
+						<img src="Image/list_우주를-줄게.png" onclick="select(9)">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	
+	<div class="album">
+		<img id="album" src="Music/1.png" width="558">
+	</div>
+		<div class="main">
+		<div class="before">
+			<img src="Image/Dance_before_press.png" onclick="dance_num(0)">
+		</div>
+		<div class="play">
+			<img id="play" src="Image/Dance_play.png" onclick="dance()">			
+		</div>
+		
+		<div class="next">
+			<img src="Image/Dance_next_press.png" onclick="dance_num(1)">
+		</div>
+	</div>
+	</div>
+</div>
+<div class="footer" style="width: 1080px;">
+		<div id="slider">
+			 
+			   <img src="../../images/slider/1.png" name="pic" width="1080" >
+			</div>
+			
+
+	</div>
+	<audio id="audio">
+ 
+  <source src="Music/Mariah Carey - All I Want For Christmas Is You - Lyrics.mp3"  id="player" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+</body>
+</html>

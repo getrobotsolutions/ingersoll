@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" charset="EUC-KR"/>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#visible {
+	overflow: hidden;
+}
+
+#div1 {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+}
+
+#setting {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+</style>
+
+<script language="JavaScript" type="text/javascript" src="../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="IdlePage.js"></script>
+<script type="text/javascript">
+
+function JSMain()
+{
+	StartScenario();
+	window.external.SetVisualFenceOnOff(true);
+}
+
+function JSUnload()
+{
+	window.external.SetVisualFenceOnOff(false);
+}
+
+</script>
+
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" style="background-color: black" scroll=no onload="JSMain()" onbeforeunload="JSUnload()">
+
+<div id="div1">
+	<img src="Image/idle.png">
+</div>
+<div id="setting">
+		<img src="Image/btn_0809.png" onclick="Home()">
+</div>
+
+
+</body>
+</html>

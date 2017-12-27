@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+<style>
+<!--
+body {margin:0;padding:0;}
+#visible
+{
+overflow: hidden;
+}
+-->
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="SanseoAdvantage.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+	ChangeLanguage("en");
+SetVolume(0.7);
+	PlaySpeech("Act fast. Take a picture of this coupon and follow the instructions on my screen.");
+	
+ jQuery(function() {
+ 	var m_names = new Array("January", "February", "March", 
+"April", "May", "June", "July", "August", "September", 
+"October", "November", "December");
+ 	var a_p = "";
+
+     var d = new Date();
+
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+
+var curr_hour = d.getHours();
+
+if (curr_hour < 12)
+   {
+   a_p = "AM";
+   }
+else
+   {
+   a_p = "PM";
+   }
+if (curr_hour == 0)
+   {
+   curr_hour = 12;
+   }
+if (curr_hour > 12)
+   {
+   curr_hour = curr_hour - 12;
+   }
+
+var curr_min = d.getMinutes();
+var curr_sec = d.getSeconds();
+
+$("#datee").html(m_names[curr_month] + " " + " " + curr_date + ", " + curr_year);
+  
+
+$("#timee").html(curr_hour + " : " + curr_min + ":" + curr_sec + " " + a_p);
+  
+});
+	var l=0;
+
+	setInterval(function(){	
+			    l++;
+				if(l>3){
+					
+					l=1;
+				}
+				document.pic.src="../../images/slider/" + l + ".png";	
+	}
+	,3000);
+
+	//window.external.StartFaceTracking(True);
+			
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+function JSMain()
+{
+	//var strIdx = readCookie("CurrentMovie");
+	//FC_ChangeAdMovieHtml(strIdx);
+    
+}
+
+function JSUnload()
+{
+	if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
+	//HideAdMovie();
+}
+
+
+</script>
+
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+<link href="sanseo-advantage.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; ">
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+
+	<div class="main">
+		<div class="contents" style="">
+			
+			<div style="text-align: center;color: white;padding-top:25px;">
+				<span id="datee" style=></span><br/>
+				<span id="timee"></span>
+				<img src="images/robot.png">
+				<h1>Ingersoll</h1>
+				<h1 style="font-size: 60px;margin-bottom: 0;margin-top: 15px;">$500.00</h1>
+				<h1 style="margin-top:5px;margin-bottom: 10px;">Robot Coupon</h1>
+				<br/>
+				<p>Take a photo of this Robot Coupon and then bring it to<br/> Ingersoll Auto and take a Test Drive in the next 48 hours, and <br/>save an additional $500 on your car purchase!<br/><br/>
+
+	* This special offer available ONLY via this Robot.  Hurry!<br/>
+				Good for only 48 hours!<br/><br/>
+
+Ingersoll Auto<br/>
+84 Federal Road<br/>
+Danbury, CT 06810<br/><br/>
+
+203-885-1712
+			</div>
+		</div>
+
+	</div>
+	<div class="footer" style="width: 1080px;">
+		<div id="slider">
+		   <img src="../../images/slider/1.png" name="pic" width="1080" >
+		</div>
+	</div>
+	
+
+
+	<div id="dialog-overlay"></div>
+			<div id="dialog-box">
+				
+			</div>
+</body>
+</body>
+
+
+</html>

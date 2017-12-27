@@ -1,0 +1,142 @@
+﻿<!--
+//*****************************************************************************************
+// Contents Framework : Servie - Robot Avatar Part.
+//                      Date : 2016.02.02
+//
+//    (1)
+//          User Change : [Step 1]
+//					      [Step 2]
+//*****************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+<style>
+<!--
+body {margin:0;padding:0;}
+#visible
+{
+overflow: hidden;
+}
+-->
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="ExpertSaying.js"></script>
+
+<script language="JavaScript" type="text/javascript">
+	PlaySpeech("Search our inventory along with special offers.");
+		var j=1;
+function slide(k){
+	
+			    j=k+j;
+				if(j>2){	
+					j=1;
+				}
+				if(j<1){	
+					j=2;
+				}
+				document.picc.src="" + j + ".png";
+			
+		
+	}
+	var i=0;
+	setInterval(function(){	
+			    i++;
+				if(i>3){
+					
+					i=1;
+				}
+				document.pic.src="../../images/slider/" + i + ".png";	
+	}
+	,3000);
+	//window.external.StartFaceTracking(True);
+			
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+function JSMain()
+{
+	//var strIdx = readCookie("CurrentMovie");
+	//FC_ChangeAdMovieHtml(strIdx);
+    
+}
+
+
+
+function JSUnload()
+{
+	//if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
+	//HideAdMovie();
+}
+
+
+
+</script>
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0;  width: 1080px; height: 1920px; ">
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+		</div>	
+		
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+
+<div class="main">
+		
+		
+		
+		
+		<div class="contents" style="">
+			
+		<iframe src="http://www.ingersollautoofdanbury.com/showroom/chevrolet" width="1080" height="1100" frameborder="0"></iframe>
+	</div>
+
+			<!--<iframe src="http://numalliance.com/click_and_find.html" width="1080" height="1000" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+			<!--<video width="1080" height="720" controls>
+  <source src="about-icc.mp4" type="video/mp4">
+  
+  Your browser does not support the video tag.
+</video>-->
+	</div>
+		<div class="footer" style="width: 1080px;">
+		<div id="slider">
+			 
+			   <img src="../../images/slider/1.png" name="pic" width="1080" >
+		</div>
+			
+
+	</div>
+</body>
+
+
+</html>

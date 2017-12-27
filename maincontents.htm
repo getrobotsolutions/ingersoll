@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+
+<!--<script language="JavaScript" type="text/javascript"
+	src="Scripts/FlashPlayer.js"></script>-->
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/LogConsole.js"></script>
+
+
+<script language="JavaScript" type="text/javascript"
+	src="maincontents.js"></script>
+
+<style type="text/css">
+	.icons-text{color:white;font-size: 35px;min-height: 81px;}
+</style>
+
+
+<script type="text/javascript">
+//PlaySpeech("Saneso");
+//PlaySpeech("Endoscopy Reinvented");
+var i=0;
+	setInterval(function(){	
+				i++;
+				if(i>3){
+					
+					i=1;
+				}
+				document.pic.src="images/slider/" + i + ".png";
+			
+		
+	}
+	,3000);
+	//window.external.StartFaceTracking(True);
+	var ms = 1;	
+	function play_music(){
+		
+		if(ms == 1){
+			//alert("playing");
+			var musicButton=document.getElementById('music-button');
+			musicButton.src='image/stop.png';
+
+			playAud();
+			ms=0;
+			return;
+		}
+		if(ms == 0){
+			//alert("paused");
+			pauseAud();		
+			var musicButton=document.getElementById('music-button');
+			musicButton.src='image/play.png';
+			ms=1;
+			return;
+		}
+	}
+	function playAud() { 
+		var aud=document.getElementById("music");
+		SetVolume(0.5);
+		aud.play(); 
+	} 
+
+	function pauseAud() { 
+		var aud=document.getElementById("music");
+		aud.pause(); 
+	}
+
+
+	var strLang;
+	strLang = "En";
+
+	function Setting() {
+		location.href = "Config/Config.htm";
+	}
+
+	function Robo() {
+		location.href = "Contetents/RObo.htm";
+	}
+	ChangeLanguage("english");
+	function ChangeLanguage(language) {
+		var lang = language;
+		var chlang;
+		if ((language == "Korean") || (language == "korean")
+				|| (language == "Kr") || (language == "kr")){
+			lang = "ko-kr";
+			chlang = "Kr";	}
+		if ((language == "English") || (language == "english")
+				|| (language == "En") || (language == "en")){
+			lang = "en-us";
+			chlang = "En";
+			}
+		if ((language == "Japanese") || (language == "japanese")
+				|| (language == "Jp") || (language == "jp")){
+			lang = "ja-jp";
+			chlang = "Jp";
+			}
+		if ((language == "Chinese") || (language == "chinese")
+				|| (language == "Cn") || (language == "cn")){
+			lang = "zh-cn";
+			chlang = "Cn";
+			}
+		g_language = language;
+		chlang
+		writeCookie('CurrentLanguage', chlang, 30);
+
+		window.external.ChangeLanguage(lang);
+	}
+	ChangeLanguage("En");
+
+	
+	function CurrentLanguage(strPara) {
+		switch (strPara) {
+		case 'ko-kr':
+			strLang = 'Kr';
+			ChangeKr();
+			break;
+
+		case 'en-us':
+			strLang = 'En';
+			ChangeEn();
+			break;
+
+		case 'ja-jp':
+			strLang = 'Jp';
+			ChangeJp();
+			break;
+
+		case 'zh-cn':
+			strLang = 'Cn';
+			ChangeCn();
+			break;
+		}
+
+	}
+
+	
+	function JSMain() {
+		//FC_ReadSelectedMovie(readCookie('CurrentMovie'));
+		//CurrentLanguage(readCookie('CurrentLanguage'));
+	}
+
+	function JSUnload() {
+		//HideAdMovie();
+		window.external.RobotDanceStart(false);
+		SetVolume(0.7);
+	}
+
+var i=0;
+function Display() {
+	//alert("test");
+
+	if(i==0)
+	{
+		document.getElementById("clickhere").style.visibility = "visible";
+		document.getElementById("clickhere_button").value = "Click here to end Call";
+		i=1;
+	}
+	else
+	{
+		document.getElementById("clickhere").style.visibility = "collapse";
+		document.getElementById("clickhere_button").value = "Click here to start Video Chat";
+		i=0;
+	}
+}
+	
+	
+</script>
+
+
+<link href="css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="css/Language.css" rel="stylesheet" type="text/css" />
+<link href="css/Main.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body oncontextmenu="return false" onselectstart="return false"
+	ondragstart="return false"
+	style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; /*background-image: url('Image/Bkgrd2.jpg');background-size: cover;*/"
+	scroll=no onload="JSMain()" onbeforeunload="JSUnload()">
+
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+			
+		<div style="position: absolute;top:40px;right:40px;width: 50px;">
+		
+		
+		<img src="image/play.png" id="music-button" width="80" onclick="play_music()">
+			<audio style="visibility: hidden;" id="music" controls >
+				<!--<source src="horse.ogg" type="audio/ogg">-->
+				<source src="Music01.mp3" type="audio/mpeg">
+				  Your browser does not support the audio element.
+			</audio>	
+			
+		</div>
+		<div style="float: left;
+	position: relative;
+	left: 174px;">
+			84 FEDERAL ROAD 
+DANBURY, CT 06810
+		</div>
+
+		
+	</div>
+			<div id="header-bottom" style="">
+			<img src="images/brand-logo-1.png" width="120">
+			<img src="images/brand-logo-2.png" width="180">
+			<img src="images/brand-logo-3.png" width="180">
+		</div>
+
+	<div class="main">
+
+		<div class="contents" style=" padding-top: 100px;">
+
+			<input id="clickhere_button" type="button" onclick="Display();" value="Questions?  Click here to video chat with a product specialist.">
+
+			<div class="contents-right" style="overflow: hidden; margin-top: 20px !important;">
+				<iframe id="clickhere" src="https://getaroom.io/5a8f48" width="400" height="800" style="visibility: collapse;position: relative; top: -500px; " > </iframe>
+
+			</div>
+			<table class="contents">
+				<tr style="">
+					<td><img id="RD" width="250" src="image\icon-1.png"
+						onclick="FC_ContentsCall('sanseo-advantage', '')">
+						<h2 class="icons-text">Employee Discount for Everyone</h2></td>
+					<td><img id="RD" width="250" src="image/icon-2.png"
+						onclick="FC_ContentsCall('DecemberSavings', '')" style="margin-top: -40px !important;">
+						<h2 class="icons-text">December Savings    
+							<br/></h2></td>
+					<!--<td><img id="RD" width="250" src="image\icon-3.png" onclick="FC_ContentsCall('TryIt', '')">
+						<h2 class="icons-text">Coupons</h2></td>-->
+				</tr>
+			</table>
+
+			
+			<table class="contents">
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td><!--<img id="HF" width="250" src="Image\Robot_Avatar.png"
+						onclick="FC_ContentsCall('RobotAvatar', '')">--><img id="PP" width="250" src="Image\PhotoPrinting_En.png"
+						onclick="FC_ContentsCall('PhotoPrinting', '')"></td>
+					<td><img id="RD" width="250" src="image\icon-3.png" onclick="FC_ContentsCall('Coupons', '')">
+						<h2 class="icons-text">Robot Coupons</h2></td>
+					<!--<td><img id="VR" width="250" src="Image\Dance.png"
+						onclick="FC_ContentsCall('RobotDance', '')"></td>-->
+				</tr>
+			</table>
+		</div>
+
+
+	</div>
+
+	<div class="footer" style="width: 1080px;">
+		<div id="slider">
+			 
+			   <img src="images/slider/1.png" name="pic" width="1080" >
+			</div>
+			
+	</div>
+			
+		
+
+</body>
+</html>

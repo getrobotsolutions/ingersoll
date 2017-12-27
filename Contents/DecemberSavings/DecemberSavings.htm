@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+
+<style>
+<!--
+body {margin:0;padding:0;}
+#visible
+{
+overflow: hidden;
+}
+-->
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="SanseoAdvantage.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+	$(document).ready(function(){
+		$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {		
+			$('#dialog-overlay, #dialog-box').hide();		
+			return false;
+		});
+		
+	});
+	
+	PlaySpeech("Save big this December with savings!");
+	
+
+	var i=1,j=0;
+	function change(j){
+				i=i+j;
+				if(i>14){
+					//GoHome();
+					//window.external.SetVolume(0.9);
+					var lang = "en-us";
+					var chlang = "En";
+					var g_language = chlang;
+					//window.external.ChangeLanguage(lang);
+					//window.external.PlaySpeech('Thank you, would you like to learn more?');
+					i=1;
+				}
+
+				if(i<=0){
+					i=14;
+				}
+				document.pic1.src="images/" + i + "c.jpg";		
+			}
+			var disclaimer="";
+		function UpdateDisclaimer(){
+			
+			if(i==1){
+				return "**Cash Savings on new in-stock 2018 Traverse Models only.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings and includes dealer discount plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer. +Traverse lease based on FWD LS stock #N105722; with MSRP $32,995.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $239 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $32,995.00 (includes destination); residual value $19,467.05.  36 payments total $8,604.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+			}
+			if(i==2){
+
+				return "*$8,500 Cash Savings on new in-stock 2017 Encore models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes all rebates and dealer discounts.  Final “buy for” price will vary depending on availability and the vehicle you choose.  Savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  **0% Financing for 72 months + $2,250 for well-qualified buyers with approval from GM Financial.   Monthly payment is $13.89 for every $1,000 financed.   0% financing + cash offer not compatible with any other program, rebate or offer. +Encore example lease based on stock #N512801; 2018 FWD Preferred Edition with MSRP $25,735.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $99 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate OR Lease Loyalty Rebate must prove qualifying leased vehicle.  MSRP $25,735.00 (includes destination); residual value $16,213.05.  24 payments total $2,376.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==3){
+					return "*Cash Savings on new in-stock 2017 Envision models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes Dealer discount plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with some other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  **0% Financing for 72 months + $2,000 for well-qualified buyers with approval from GM Financial.   Monthly payment is $13.89 for every $1,000 financed.   0% financing + cash offer not compatible with any other program, rebate or offer. +Envision example lease based on stock #N070174; AWD Preferred Edition with MSRP $38,845.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $249 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate OR Lease Loyalty Rebate; must prove qualifying leased vehicle.  MSRP $38,845.00 (includes destination); residual value $21,753.20.  36 payments total $8,964.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/17";
+				}
+				if(i==4){
+					return "*Cash Savings on new in-stock 2018 Colorado models for cash purchase or standard rate finance only..  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer. Colorado lease based on stock #N138916; 2018 Work Truck with MSRP $29,735.00.   $2,995 due at signing as cash cap cost reduction.  Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $179 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $29,735.00 (includes destination); residual value $23,193.30.  24 payments total $4,296.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+				if(i==5){
+					return "*Cash Savings on new in-stock 2017 Acadia SLT models for cash purchase or standard rate finance only, while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes dealer discount plus rebate.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  . **Acadia example lease based on stock #N147803; FWD SLE-1 with MSRP $33,770.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $139 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $33,770.00 (includes destination); residual value $21,612.80.  24 payments total $3,336.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==6){
+					return "*Cash Savings on new in-stock 2018 Tahoe models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes rebates plus dealer discount.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer. +Tahoe lease based on stock #N155217; 2018 LT with MSRP $57,295.00.   $3,995 due at signing as cash cap cost reduction.  Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $539 per month for 39 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $57,295.00 (includes destination); residual value $33,231.10.  39 payments total $21,021.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+				if(i==7){
+					return "*Employee Pricing on new in-stock 2018 Sierra SLT Crew Cab models only for cash purchase or standard rate finance while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available. Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.   Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+				
+				if(i==8){
+					return "*Cash Savings on select new in-stock 2018 Terrain models only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes GM Supplier Pricing plus Dealer discount plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with some other programs or offers, including special APR, leases, other GM discount programs or 3rd party website offers.    +Terrain example lease based on stock #N189822; AWD SLE-1 with MSRP $31,080.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $159 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $31,080.00 (includes destination); residual value $20,512.80.  24 payments total $3,816.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==9){
+					return "*Cash savings on new in-stock 2017 Regal models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes Dealer Discount plus cash rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Not compatible with any other program or offer, including coupons, leases, other GM discount programs or any 3rd party website offer.  **0% Financing for 72 months + $1,750 for well-qualified buyers with approval from GM Financial.   Monthly payment is $13.89 for every $1,000 financed.   0% financing + cash offer not compatible with any other program, rebate or offer. +Regal example lease based on stock #N192195; FWD Sport Touring Edition with MSRP $31,360.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $239 per month for 39 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $31,360.00 (includes destination); residual value $15,052.80.  39 payments total $9,321.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details..  Lease offer expires 01/02/18";
+				}
+				if(i==10){
+					return "*Cash Savings on new in-stock 2018 Silverado Crew Cab Models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes Employee Pricing plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with other offers, including coupons, special APR, Leases, other GM Discount Programs and any 3rd Party Website Offer.  +Silverado lease example based on stock #N132802; 2018 Double Cab CX 4x4 with MSRP $42,500.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $299 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $3,000 Competitive Lease Rebate; must prove qualifying leased Non-GM vehicle. MSRP $42,500.00 (includes destination); residual value $24,650.00.  36 payments total $10,764.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose.  Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==11){
+					return "*Cash Savings on new in-stock 2017 Sierra Double Cab SLE models for cash purchase or standard rate finance only while inventory supplies last- this offer ends 12/18/17.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available and includes GM Supplier Pricing plus Dealer discount plus cash rebate. Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.   Sierra Double Cab example lease based on stock #N378276; Double Cab with Elevation Edition package with MSRP $442,630.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $299 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate; must prove qualifying leased NON-GM vehicle.  MSRP $42,630.00 (includes destination); residual value $25,578.00.  36 payments total $10,764.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 12/18/17";
+				}
+				if(i==12){
+					return "*Cash Savings on new in-stock 2017 Canyon models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Discount shown reflects the maximum savings available. Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with some other programs or offers, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.   **Canyon example lease based on stock #N130018; 4WD SLE Extended Cab with MSRP $35,675.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $279 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate; must prove qualifying leased Non-GM vehicle.  MSRP $35,675.00 (includes destination); residual value $26,399.50.  24 payments total $6,696.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==13){
+					return "*Cash Savings on select new in-stock 2017 Yukon Denali models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra.  Cash savings shown reflects the maximum savings available and include GM Supplier Pricing plus rebates. Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not  compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  **0% Financing for 72 months on 2017 Yukon Denali models for well-qualified buyers with approval from GM Financial.   Monthly payment is $13.89 for every $1,000 financed.   0% financing not compatible with any other program, rebate or offer. Yukon example lease based on stock #N133327;2018  SLT with MSRP $66,190.00.  $3,295 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $659 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate; must prove qualifying leased Non-GM vehicle.  MSRP $66,190.00 (includes destination); residual value $35,742.60.  36 payments total $23,724.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $495 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==14){
+					return "*Cash Savings on new in-stock 2018 Trax models on cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes dealer discount plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with some other offers, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  **0% Financing for 60 months available for well-qualified buyers with credit approval from GM Financial.   Monthly payment is $16.67 for every $1,000 financed.  0% financing not compatible with any other program or offer.  +Trax lease example based on stock #N5071214; 2018 FWD LS with MSRP $21,945.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $99 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate; must prove qualifying leased Non-GM vehicle.  MSRP $21,945.00 (includes destination); residual value $13,167.00.  24 payments total $2,376.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+			}
+	function show(){
+		ShowPopup(UpdateDisclaimer());
+	};
+
+	var l=0;
+
+	setInterval(function(){	
+			    l++;
+				if(l>3){
+					
+					l=1;
+				}
+				document.pic.src="../../images/slider/" + l + ".png";	
+	}
+	,3000);
+
+	//window.external.StartFaceTracking(True);
+			
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+function JSMain()
+{
+	//var strIdx = readCookie("CurrentMovie");
+	//FC_ChangeAdMovieHtml(strIdx);
+    
+}
+
+function JSUnload()
+{
+	if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
+	HideAdMovie();
+}
+
+</script>
+
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+<link href="sanseo-advantage.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; ">
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+
+	<div class="main">
+		<div class="contents" style="">
+			<div id="" style="text-align: center;">
+				<img src="images/1c.jpg" name="pic1" width="1080">
+				<a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a>|<a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
+			   	
+			</div>
+			<a href="#" onclick="show()" class="discliamer">[Disclaimer]</a>
+			
+			<!--<iframe src="http://www.ingersollautoofdanbury.com/Specials" width="1080" height="1100" frameborder="0"></iframe>-->
+			<!--<iframe width="1080" height="600" src="https://www.youtube.com/embed/nlGQa-oARi0" frameborder="0" allowfullscreen></iframe>-->
+			<!--<video width="1080" height="720" controls>
+				  <source src="681925617.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>-->
+			<!--<img src="temp-minder.png" width="1080" style=""><br>
+			<img src="../../image/play.png" onclick="about()" width="100">
+			<img src="../../Image/stop.png" onclick="stopAbout()" width="100">-->
+		</div>
+
+	</div>
+	<div class="footer" style="width: 1080px;">
+		<div id="slider">
+		   <img src="../../images/slider/1.png" name="pic" width="1080" >
+		</div>
+	</div>
+	
+
+
+	<div id="dialog-overlay"></div>
+			<div id="dialog-box">
+				
+			</div>
+</body>
+</body>
+
+
+</html>

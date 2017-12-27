@@ -1,0 +1,137 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../css/Fonts/MYRIADPROREGULAR.woff);
+}
+body{
+	font-family: 'myFirstFont' !important;
+font-weight: bold;
+background-color: white;
+overflow: hidden;
+}
+div {
+	margin: 0;
+	padding: 0;
+}
+
+.home {
+	text-align: right;
+	height: 100px;
+	padding: 25px;
+}
+
+.view {
+	float: left;	
+}
+
+
+.select {
+	height: 154px;
+}
+
+.list {
+	margin-top: -152px;
+	height: 156px;
+}
+
+.main {
+	margin-top: 50px;
+	width: 600px;
+	text-align: center;
+	float: left;
+}
+
+.before {
+	margin-top: 50px;
+	width: 200px;
+	float: left;
+}
+
+.play {
+	width: 200px;
+	float: left;
+}
+
+.next {
+	margin-top: 50px;
+	width: 200px;
+	float: left;
+}
+
+.album{
+	margin-left:20px;
+	float: left;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/MYRIADPROREGULAR.woff);
+}
+body{
+	font-family: 'myFirstFont' !important;
+font-weight: bold;
+}
+.footer{background-color: white;height:500px;}
+.footer-1 h1{font-family: myFirstFont !important;font-weight: bold;}
+div.contents {
+
+	text-align: center;
+	height: 818px;	
+	
+
+}
+
+.footer-2{padding-top: 28px;}
+table.contents {
+	
+	/*padding: 50px 100px;*/
+	
+}
+.contents tr td{padding:25px;}
+
+
+#output tr td{width: 350px;text-align: left; font-family: myFirstFont !important;font-weight: bold;}
+.header{}
+.header .settingsection{
+	height: 217px;
+	vertical-align: middle;
+	width: 20%;
+	float: left;
+}
+.logo img{width: 500px !important;}
+.header .logo{width: 60% !important;}
+div.main2 {
+	/*(background-image: url("../Image/Bkgrd2.jpg");*/
+	/*background-repeat: no-repeat;*/
+	    height: 1116px;
+	    background-color: #212121;
+	    /*background: url(../Images/bg-body.gif);*/
+}
+
+#slider img{height:510px;}
+
+div.setting {
+	padding: 46px;
+	height: 120px;
+	width: 150px;
+	height: 120px;
+}
+.header{/*height: 250px;*/width: 1080px;background: #ffffff;
+    background-position: right;
+    min-height: 167px;
+    
+}
+#header-top{
+	    border-bottom: 1px solid #5f5f5f;
+    padding: 5px 2px 5px 0;
+    text-align: right;
+    background-color: white;
+    font-size: 20px;
+}
+#header-bottom{
+	width: 100%;
+    padding-top: 20px;
+	border-bottom: 4px solid #5f5f5f;
+}
+#header-bottom img{margin-right: 120px;
+    position: relative;
+    left: -60px;}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+
+
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript"
+	src="Scripts/LogConsole.js"></script>
+
+
+<script language="JavaScript" type="text/javascript"
+	src="maincontents.js"></script>
+
+
+
+<script type="text/javascript">
+	window.external.StartFaceTracking(True);
+
+	var strLang;
+	strLang = "En";
+
+	function Setting() {
+		location.href = "Config/Config.htm";
+	}
+
+	function Robo() {
+		location.href = "Contetents/RObo.htm";
+	}
+
+	function ChangeLanguage(language) {
+		var lang = language;
+		var chlang;
+		if ((language == "Korean") || (language == "korean")
+				|| (language == "Kr") || (language == "kr")){
+			lang = "ko-kr";
+			chlang = "kr";	}
+		if ((language == "English") || (language == "english")
+				|| (language == "En") || (language == "en")){
+			lang = "en-us";
+			chlang = "En";
+			}
+		if ((language == "Japanese") || (language == "japanese")
+				|| (language == "Jp") || (language == "jp")){
+			lang = "ja-jp";
+			chlang = "Jp";
+			}
+		if ((language == "Chinese") || (language == "chinese")
+				|| (language == "Cn") || (language == "cn")){
+			lang = "zh-cn";
+			chlang = "Cn";
+			}
+		g_language = language;
+		chlang
+		writeCookie('CurrentLanguage', chlang, 30);
+
+		window.external.ChangeLanguage(lang);
+	}
+
+	function ChangeKr() {
+		var imgKr = document.getElementById("Kr");
+		var imgEn = document.getElementById("En");
+		var imgCn = document.getElementById("Cn");
+		var imgJp = document.getElementById("Jp");
+
+		var imgFT = document.getElementById("FT");
+		var imgRA = document.getElementById("RA");
+		var imgFR = document.getElementById("FR");
+		var imgGM = document.getElementById("GM");
+		var imgRD = document.getElementById("RD");
+		var imgHF = document.getElementById("HF");
+		var imgPP = document.getElementById("PP");
+		var imgVR = document.getElementById("VR");
+
+		imgKr.src = "Image/Language_Kr_Select.png";
+		imgEn.src = "Image/Language_En_UnSelect.png";
+		imgCn.src = "Image/Language_Cn_UnSelect.png";
+		imgJp.src = "Image/Language_Jp_UnSelect.png";
+
+		imgFT.src = "Image/FaceTracking_Kr.png";
+		imgRA.src = "Image/RobotAvatar_Kr.png";
+		imgFR.src = "Image/FutureRobot_Kr.png";
+		imgGM.src = "Image/Game_Kr.png";
+		imgRD.src = "Image/RobotDance_Kr.png";
+		imgHF.src = "Image/HumanFollow_Kr.png";
+		imgPP.src = "Image/PhotoPrinting_Kr.png";
+		imgVR.src = "Image/VoiceRecognition_Kr.png";
+		ChangeLanguage("Kr");
+		strLang = 'Kr';
+	}
+
+	function ChangeEn() {
+		var imgKr = document.getElementById("Kr");
+		var imgEn = document.getElementById("En");
+		var imgCn = document.getElementById("Cn");
+		var imgJp = document.getElementById("Jp");
+
+		var imgFT = document.getElementById("FT");
+		var imgRA = document.getElementById("RA");
+		var imgFR = document.getElementById("FR");
+		var imgGM = document.getElementById("GM");
+		var imgRD = document.getElementById("RD");
+		var imgHF = document.getElementById("HF");
+		var imgPP = document.getElementById("PP");
+		var imgVR = document.getElementById("VR");
+
+		imgKr.src = "Image/Language_Kr_UnSelect.png";
+		imgEn.src = "Image/Language_En_Select.png";
+		imgCn.src = "Image/Language_Cn_UnSelect.png";
+		imgJp.src = "Image/Language_Jp_UnSelect.png";
+
+		imgFT.src = "Image/FaceTracking_En.png";
+		imgRA.src = "Image/RobotAvatar_En.png";
+		imgFR.src = "Image/FutureRobot_En.png";
+		imgGM.src = "Image/Game_En.png";
+		imgRD.src = "Image/RobotDance_En.png";
+		imgHF.src = "Image/HumanFollow_En.png";
+		imgPP.src = "Image/PhotoPrinting_En.png";
+		imgVR.src = "Image/VoiceRecognition_En.png";
+		ChangeLanguage("En");
+		strLang = 'En';
+
+	}
+
+	function ChangeCn() {
+		var imgKr = document.getElementById("Kr");
+		var imgEn = document.getElementById("En");
+		var imgCn = document.getElementById("Cn");
+		var imgJp = document.getElementById("Jp");
+
+		var imgFT = document.getElementById("FT");
+		var imgRA = document.getElementById("RA");
+		var imgFR = document.getElementById("FR");
+		var imgGM = document.getElementById("GM");
+		var imgRD = document.getElementById("RD");
+		var imgHF = document.getElementById("HF");
+		var imgPP = document.getElementById("PP");
+		var imgVR = document.getElementById("VR");
+
+		imgKr.src = "Image/Language_Kr_UnSelect.png";
+		imgEn.src = "Image/Language_En_UnSelect.png";
+		imgCn.src = "Image/Language_Cn_Select.png";
+		imgJp.src = "Image/Language_Jp_UnSelect.png";
+
+		imgFT.src = "Image/FaceTracking_Cn.png";
+		imgRA.src = "Image/RobotAvatar_Cn.png";
+		imgFR.src = "Image/FutureRobot_Cn.png";
+		imgGM.src = "Image/Game_Cn.png";
+		imgRD.src = "Image/RobotDance_Cn.png";
+		imgHF.src = "Image/HumanFollow_Cn.png";
+		imgPP.src = "Image/PhotoPrinting_Cn.png";
+		imgVR.src = "Image/VoiceRecognition_Cn.png";
+		ChangeLanguage("Cn");
+		strLang = 'Cn';
+	}
+
+	function ChangeJp() {
+		var imgKr = document.getElementById("Kr");
+		var imgEn = document.getElementById("En");
+		var imgCn = document.getElementById("Cn");
+		var imgJp = document.getElementById("Jp");
+
+		var imgFT = document.getElementById("FT");
+		var imgRA = document.getElementById("RA");
+		var imgFR = document.getElementById("FR");
+		var imgGM = document.getElementById("GM");
+		var imgRD = document.getElementById("RD");
+		var imgHF = document.getElementById("HF");
+		var imgPP = document.getElementById("PP");
+		var imgVR = document.getElementById("VR");
+
+		imgKr.src = "Image/Language_Kr_UnSelect.png";
+		imgEn.src = "Image/Language_En_UnSelect.png";
+		imgCn.src = "Image/Language_Cn_UnSelect.png";
+		imgJp.src = "Image/Language_Jp_Select.png";
+
+		imgFT.src = "Image/FaceTracking_Jp.png";
+		imgRA.src = "Image/RobotAvatar_Jp.png";
+		imgFR.src = "Image/FutureRobot_Jp.png";
+		imgGM.src = "Image/Game_Jp.png";
+		imgRD.src = "Image/RobotDance_Jp.png";
+		imgHF.src = "Image/HumanFollow_Jp.png";
+		imgPP.src = "Image/PhotoPrinting_Jp.png";
+		imgVR.src = "Image/VoiceRecognition_Jp.png";
+		ChangeLanguage("Jp");
+		strLang = 'Jp';
+	}
+
+	function CurrentLanguage(strPara) {
+		switch (strPara) {
+		case 'ko-kr':
+			strLang = 'Kr';
+			ChangeKr();
+			break;
+
+		case 'en-us':
+			strLang = 'En';
+			ChangeEn();
+			break;
+
+		case 'ja-jp':
+			strLang = 'Jp';
+			ChangeJp();
+			break;
+
+		case 'zh-cn':
+			strLang = 'Cn';
+			ChangeCn();
+			break;
+		}
+
+	}
+
+	function FC_ReadSelectedMovie() {
+		var tmpIdx = readCookie("CurrentMovie");
+		video(tmpIdx);
+		FC_ChangeAdMovieHtml(tmpIdx);
+	}
+
+	function video(strPara) {
+
+		var movie = strPara;
+
+		if (movie == 1) {
+			var selectname01 = document.getElementById("videoname01");
+			selectname01.src = "Image/Movie01_Select-1-1.png";
+			var selectname02 = document.getElementById("videoname02");
+			selectname02.src = "Image/Movie01_Select-2.png";
+			var selectname03 = document.getElementById("videoname03");
+			selectname03.src = "Image/Movie01_Select-3.png";
+			var selectname03 = document.getElementById("videoname04");
+			selectname03.src = "Image/Movie01_Select-4.png";
+			FC_ChangeAdMovieHtml(1);
+
+		}
+
+		else if (movie == 2) {
+			var selectname01 = document.getElementById("videoname01");
+			selectname01.src = "Image/Movie01_Select-1.png";
+			var selectname02 = document.getElementById("videoname02");
+			selectname02.src = "Image/Movie01_Select-2-1.png";
+			var selectname03 = document.getElementById("videoname03");
+			selectname03.src = "Image/Movie01_Select-3.png";
+			var selectname03 = document.getElementById("videoname04");
+			selectname03.src = "Image/Movie01_Select-4.png";
+			FC_ChangeAdMovieHtml(2);
+		}
+
+		else if (movie == 3) {
+			var selectname01 = document.getElementById("videoname01");
+			selectname01.src = "Image/Movie01_Select-1.png";
+			var selectname02 = document.getElementById("videoname02");
+			selectname02.src = "Image/Movie01_Select-2.png";
+			var selectname03 = document.getElementById("videoname03");
+			selectname03.src = "Image/Movie01_Select-3-1.png";
+			var selectname03 = document.getElementById("videoname04");
+			selectname03.src = "Image/Movie01_Select-4.png";
+			FC_ChangeAdMovieHtml(3);
+		}
+
+		else if (movie == 4) {
+			var selectname01 = document.getElementById("videoname01");
+			selectname01.src = "Image/Movie01_Select-1.png";
+			var selectname02 = document.getElementById("videoname02");
+			selectname02.src = "Image/Movie01_Select-2.png";
+			var selectname03 = document.getElementById("videoname03");
+			selectname03.src = "Image/Movie01_Select-3.png";
+			var selectname03 = document.getElementById("videoname04");
+			selectname03.src = "Image/Movie01_Select-4-1.png";
+			FC_ChangeAdMovieHtml(4);
+		}
+
+		writeCookie('CurrentMovie', movie, 30);
+	}
+
+	function JSMain() {
+		FC_ReadSelectedMovie(readCookie('CurrentMovie'));
+		CurrentLanguage(readCookie('CurrentLanguage'));
+	}
+
+	function JSUnload() {
+		HideAdMovie();
+	}
+
+	function FC_ChangeAdMovieHtml(strIdx) {
+		var path;
+		if (strIdx == "1")
+			path = "Movies/main1.avi";
+		if (strIdx == "2")
+			path = "Movies/main2.avi";
+		if (strIdx == "3")
+			path = "Movies/main3.avi";
+		if (strIdx == "4")
+			path = "Movies/main4.avi";
+		PlayAdMovie(path, 0, 1200, 1080, 720, true);
+	}
+</script>
+<link href="css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="css/Language.css" rel="stylesheet" type="text/css" />
+<link href="css/Main.css" rel="stylesheet" type="text/css" />
+<link href="css/VideoMenu.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body oncontextmenu="return false" onselectstart="return false"
+	ondragstart="return false"
+	style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; background-image: url('Image/FuroD_main.jpg');"
+	scroll=no onload="JSMain()" onbeforeunload="JSUnload()">
+
+	<!------------------------------------------------------ ***** 메인 페이지 *****  ------------------------------------------------------>
+
+	<div class="main">
+		<img src="Image/btn_Config.png"
+			style="position: absolute; right: 30px; top: 30px"
+			onclick="Setting()">
+		<!-------------------------------------------- 설정 버튼  -------------------------------------------->
+
+		<div class="settingsection" align="left"></div>
+
+		<!-------------------------------------------- *** 언어 선택 부분 ***  -------------------------------------------->
+
+		<nav>
+			<table class="language">
+				<tr>
+					<td><img id="En" src="Image/Language_En_Select.png"
+						onclick="ChangeEn()"></td>
+					<td><img id="Cn" src="Image/Language_Cn_UnSelect.png"
+						onclick="ChangeCn()"></td>
+					<td><img id="Kr" src="Image/Language_Kr_UnSelect.png"
+						onclick="ChangeKr()"></td>
+					<td><img id="Jp" src="Image/Language_Jp_UnSelect.png"
+						onclick="ChangeJp()"></td>
+				</tr>
+			</table>
+		</nav>
+
+		<!-------------------------------------------- *** 메뉴선택 부분  *** -------------------------------------------->
+		<br> <br> <br>
+		<div class="contents">
+		
+			<table class="contents">
+				<tr style="">
+					<td><img id="FR" src="Image\FutureRobot_Kr.png"
+						onclick="FC_ContentsCall('FutureRobot', strLang)"></td>
+					<td><img id="RA" src="Image\RobotAvatar_Kr.png"
+						onclick="FC_ContentsCall('RobotAvatar', strLang)"></td>
+					<td><img id="GM" src="Image\Game_kr.png"
+						onclick="FC_ContentsCall('Game', strLang)"></td>
+					<td><img id="RD" src="Image\RobotDance_Kr.png"
+						onclick="FC_ContentsCall('RobotDance', strLang)"></td>
+				</tr>
+			</table>
+			
+			<table class="contents">
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>
+					<td><img id="FT" src="Image\FaceTracking_Kr.png"
+						onclick="FC_ContentsCall('FaceTracking', strLang)"></td>
+					<td><img id="HF" src="Image\HumanFollow_Kr.png"
+						onclick="FC_ContentsCall('HumanFollow', strLang)"></td>
+					<td><img id="PP" src="Image\PhotoPrinting_Kr.png"
+						onclick="FC_ContentsCall('PhotoPrinting', strLang)"></td>
+					<td><img id="VR" src="Image\VoiceRecognition_Kr.png"
+						onclick="FC_ContentsCall('VoiceRecognition', strLang)"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="videomenu">
+		
+			<table class="videotable">
+				<tr>
+					<td class="videomenu01"><img style="position: relative"
+						src="Image/Movie01_Select-1-1.png" id="videoname01"
+						onclick="video(1)"></img></td>
+					<td class="videomenu02"><img style="position: relative"
+						src="Image/Movie01_Select-2-1.png" id="videoname02"
+						onclick="video(2)"> </img></td>
+					<td class="videomenu03"><img style="position: relative"
+						src="Image/Movie01_Select-3-1.png" id="videoname03"
+						onclick="video(3)"> </img></td>
+					<td class="videomenu04"><img style="position: relative"
+						src="Image/Movie01_Select-4-1.png" id="videoname04"
+						onclick="video(4)"></img></td>
+				</tr>
+			</table>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

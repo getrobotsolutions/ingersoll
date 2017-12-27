@@ -1,0 +1,143 @@
+﻿<!--
+//*****************************************************************************************
+// Contents Framework : Servie - Robot Avatar Part.
+//                      Date : 2014.11.03
+//
+//    (1) 
+//          User Change : [Step 1] 
+//					      [Step 2] 
+//*****************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+<style>
+@font-face {
+    font-family: myFirstFont;
+    src: url('../../css/Fonts/MyriadPro-Bold.otf');
+}
+body {margin:0;padding:0;font-family: myFirstFont;}
+#visible
+{
+overflow: hidden; 
+}
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="RobotAvatar.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+PlaySpeech("Avatar - Look your best, because now you are about to be a robot.");
+	var i=0;
+	setInterval(function(){	
+			    i++;
+				if(i>3){
+					
+					i=1;
+				}
+				document.pic.src="../../images/slider/" + i + ".png";	
+	}
+	,3000);
+	//window.external.StartFaceTracking(True);
+	
+function JSMain()
+{
+}
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+//--------------------------------------------------------------------------
+//-- Flash -> html : Flash에서 선택한 Movie를 html에서 Play 
+//--------------------------------------------------------------------------
+/*
+function FC_ChangeAdMovieHtml(strIdx)
+{
+	var movieObj = document.getElementById('MediaPlayer');
+	if(strIdx == "1") movieObj.src = "../../Movie/main1.mp4";
+	if(strIdx == "2") movieObj.src = "../../Movie/main2.mp4";
+	if(strIdx == "3") movieObj.src = "../../Movie/main3.mp4";
+	if(strIdx == "4") movieObj.src = "../../Movie/main4.mp4";
+	movieObj.paly();
+}
+*/
+</script>
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="JSMain()" id="visible" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px;">
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+<div class="main">
+		
+		<div class="contents" style="">
+			<script language="JavaScript" type="text/javascript">
+				AC_FL_RunContent(
+					'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0',
+					'width', '100%',
+					'height', '650',		// <-- FURO-S
+					'src', 'RobotAvatar',	// <-- 여기에 Flash 파일명을 적어주세요.
+					'quality', 'high',
+					'pluginspage', 'http://www.adobe.com/go/getflashplayer_kr',
+					'align', 'middle',
+					'play', 'true',
+					'loop', 'false',
+					'scale', 'showall',
+					'wmode', 'transparent',
+					'devicefont', 'false',
+					'id', 'App',
+					'bgcolor', '#ffffff',
+					'name', 'App',
+					'menu', 'false',
+					'allowFullScreen', 'false',
+					'allowScriptAccess','always',
+					'movie', 'RobotAvatar',	// <-- 여기에 Flash 파일명을 적어주세요.
+					'salign', 'top'
+					); //end AC code
+				</script>
+			</div>
+</div>
+
+
+			<div class=" footer" style="width: 1080px;">
+				<div id="slider">
+			 
+			   <img src="../../images/slider/1.png" name="pic" width="1080" >
+			</div>
+			
+
+	   </div>
+			
+</body>
+
+
+</html>

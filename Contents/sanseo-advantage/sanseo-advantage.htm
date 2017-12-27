@@ -1,0 +1,195 @@
+﻿<!--
+//*****************************************************************************************
+// Contents Framework : Servie - Robot Avatar Part.
+//                      Date : 2016.02.02
+//
+//    (1)
+//          User Change : [Step 1]
+//					      [Step 2]
+//*****************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<style>
+<!--
+body {margin:0;padding:0;}
+#visible
+{
+overflow: hidden;
+}
+-->
+
+</style>
+
+<!-- 기본으로 포함되어야 하는 js -->
+<script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
+<script language="JavaScript" type="text/javascript" src="../../Scripts/LogConsole.js"></script>
+
+<!-- 추가적으로 포함되는 js -->
+<script language="JavaScript" type="text/javascript" src="SanseoAdvantage.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+	$(document).ready(function(){
+		$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {		
+			$('#dialog-overlay, #dialog-box').hide();		
+			return false;
+		});
+		
+	});
+	
+	PlaySpeech("Check out these cars.  You get the same discounts as our employees.  ");
+	
+
+	var i=1,j=0;
+	function change(j){
+				i=i+j;
+				if(i>7){
+					//GoHome();
+					//window.external.SetVolume(0.9);
+					var lang = "en-us";
+					var chlang = "En";
+					var g_language = chlang;
+					//window.external.ChangeLanguage(lang);
+					//window.external.PlaySpeech('Thank you, would you like to learn more?');
+					i=1;
+				}
+
+				if(i<=0){
+					i=7;
+				}
+				document.pic1.src="images/" + i + "c.png";		
+			}
+			var disclaimer="";
+		function UpdateDisclaimer(){
+			
+			if(i==1){
+				return "*Employee Pricing on new in-stock 2017 Corvette models for cash purchase or standard rate financing only while inventory supplies last. Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes Employee Pricing plus Dealer discount. Total savings and final “buy for” price will vary depending on availability and the vehicle you choose. Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3 rd party website offer. Residency restrictions may apply. Prior sales excluded on all offers. Photos for illustrative purposes only. Not responsible for typographic errors. See dealer for full details. Offer expires 01/02/18";
+			}
+			if(i==2){
+
+				return "*$2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $169 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes: $500 Competitive Lease Rebate OR $500 Lease Loyalty Rebate (must prove qualifying leased vehicle) and $3,000 Connecticut C.H.E.A.P.R. rebate; must be a CT resident to qualify; $3,000 rebate offer good while CT funds are available; funds are limited.  MSRP $43,615.00 (includes destination); residual value $26,169.00.  36 payments total $6,084.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Not compatible with some other offers.    Residency restrictions apply. Payments may be higher in other states.   Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+				if(i==3){
+					return "*Cash Savings on new in-stock 2018 Equinox models for cash purchase or standard rate finance only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes Employee Pricing plus rebates.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  ^Equinox lease based on FWD LS stock #N173432; with MSRP $26,455.00.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $129 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,500 Competitive Lease Rebate must prove qualifying leased Non-GM vehicle.  MSRP $26,455.00 (includes destination); residual value $17,724.85.  24 payments total $3,096.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==4){
+					return "*Savings shown on new in-stock 2017 Volt models for cash purchase or standard rate financing only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes Employee Pricing plus Dealer discount plus rebates. Includes Connecticut C.H.E.A.P.R. Rebate while funds are available; you must be a CT resident.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer. **0% Financing up to 60 months in lieu of $1,000 Manufacturer rebate; not compatible with other programs. Lease based on stock # N212773; 2017 LT with MSRP $34,695.   $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $129 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes: $500 Competitive Lease Rebate OR $500 Lease Loyalty Rebate (must prove qualifying leased vehicle) and $2,000 Connecticut C.H.E.A.P.R. rebate; you must be a CT resident to qualify; $2,000 rebate offer good while CT funds are available; funds are limited.  MSRP $34,695.00 (includes destination); residual value $17,694.45.  36 payments total $4,644.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Not compatible with some other offers.    Residency restrictions apply. Payments may be higher in other states.   Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+				if(i==5){
+					return "*Employee Pricing on new in-stock 2017 Malibu models only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes GM Employee Pricing plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Employee Pricing not compatible with some other program or offers; see dealer for details.  +Malibu lease based on stock #N281270. 1LT with MSRP $26,395.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $169 per month for 36 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,000 Lease Loyalty Rebate; must prove qualifying leased vehicle.  MSRP $26,395.00 (includes destination); residual value $14,517.25.  36 payments total $6,084.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==6){
+					return "*Employee Pricing on new in-stock 2017 Cruze models only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes GM Employee Pricing plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Employee Pricing not compatible with some other program or offers; see dealer for details.  **0% Financing for 60 months available for well-qualified buyers with credit approval from GM Financial.   Monthly payment is $16.67 for every $1,000 financed.  0% financing not compatible with some other programs.  +Cruze lease example based on stock #N615333 with MSRP $24,085.  $2,995 due at signing as cash cap cost reduction. Sales tax, title, DMV and $499 dealer fee extra. For well-qualified lessees; must have top tier approval from primary lender.  Lease payment $169 per month for 24 months, 10,000 miles per year; excess miles @ 25₵ per mile. Includes $1,000 Lease Loyalty Rebate; must prove qualifying leased vehicle.  MSRP $24,085.00 (includes destination); residual value $14,691.85.  24 payments total $3,000.00.  Lessee pays for maintenance and repairs and is responsible for excess mileage, excess wear/tear and $395 disposition fee at lease end. Your payment will vary depending on availability and the exact model and options you choose. Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18";
+				}
+				if(i==7){
+					return "*Cash Savings on new in-stock 2017 Sonic Spark models for cash purchase or standard rate financing  only while inventory supplies last.  Sales tax, title, DMV and $499 dealer fee extra. Discount shown reflects the maximum savings available and includes GM Employee Pricing plus dealer discount plus rebates.  Total savings and final “buy for” price will vary depending on availability and the vehicle you choose.  Cash  savings not compatible with any other program or offer, including coupons, special APR, leases, other GM discount programs or any 3rd party website offer.  Residency restrictions may apply.  Prior sales excluded on all offers.  Photos for illustrative purposes only.  Not responsible for typographic errors.  See dealer for full details.  Offer expires 01/02/18.";
+				}
+			}
+	function show(){
+		ShowPopup(UpdateDisclaimer());
+	};
+
+	var l=0;
+
+	setInterval(function(){	
+			    l++;
+				if(l>3){
+					
+					l=1;
+				}
+				document.pic.src="../../images/slider/" + l + ".png";	
+	}
+	,3000);
+
+	//window.external.StartFaceTracking(True);
+			
+function Setting() {
+		location.href = "../../Config/Config.htm";
+	}
+function JSMain()
+{
+	//var strIdx = readCookie("CurrentMovie");
+	//FC_ChangeAdMovieHtml(strIdx);
+    
+}
+
+function JSUnload()
+{
+	if(flagPictureAvatar == "true")	DeleteRobotFace();	//사진 아바타 삭제
+	HideAdMovie();
+}
+
+</script>
+
+<link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+<link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+<link href="sanseo-advantage.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="JSMain()" id="visible" bgcolor="black" onbeforeunload="JSUnload()" style="padding: 0; margin: 0; background-repeat: no-repeat; width: 1080px; height: 1920px; ">
+
+	<div id="header-top">
+		SALES (203) 885-1712 | SERVICE (203) 648-4668
+	</div>	
+	<div class="header" style="">
+		<div class="settingsection" align="left"><a href="#" onclick="GoHome()"><img src="../../images/Home-icon.png"
+			width="80" style="position: absolute; left: 20px; top: 40px" ></a>
+		</div>
+		<div class="logo" style="width: 40%;float: left;text-align: center;"><img src="../../images/logo.png" width="450" style="padding-top: 34px;width: 450px;" onclick="Setting()">
+			</div>
+		<div style="float: left;position: relative;left: 174px;">84 FEDERAL ROAD DANBURY, CT 06810
+		</div>
+
+	</div>
+	<div id="header-bottom" style="">
+			<img src="../../images/brand-logo-1.png" width="120">
+			<img src="../../images/brand-logo-2.png" width="180">
+			<img src="../../images/brand-logo-3.png" width="180">
+	</div>
+
+	<div class="main">
+		<div class="contents" style="">
+			<div id="" style="text-align: center;">
+				<img src="images/1c.png" name="pic1" width="1080">
+				<a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a>|<a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
+			   	
+			</div>
+			<a href="#" onclick="show()" class="discliamer">[Disclaimer]</a>
+			
+			<!--<iframe src="http://www.ingersollautoofdanbury.com/Specials" width="1080" height="1100" frameborder="0"></iframe>-->
+			<!--<iframe width="1080" height="600" src="https://www.youtube.com/embed/nlGQa-oARi0" frameborder="0" allowfullscreen></iframe>-->
+			<!--<video width="1080" height="720" controls>
+				  <source src="681925617.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>-->
+			<!--<img src="temp-minder.png" width="1080" style=""><br>
+			<img src="../../image/play.png" onclick="about()" width="100">
+			<img src="../../Image/stop.png" onclick="stopAbout()" width="100">-->
+		</div>
+
+	</div>
+	<div class="footer" style="width: 1080px;">
+		<div id="slider">
+		   <img src="../../images/slider/1.png" name="pic" width="1080" >
+		</div>
+	</div>
+	
+
+
+	<div id="dialog-overlay"></div>
+			<div id="dialog-box">
+				
+			</div>
+</body>
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/MYRIADPROREGULAR.woff);
+}
+body{
+	font-family: 'myFirstFont' !important;
+font-weight: bold;
+}
+.footer{background-color: white;height:600px;}
+.footer-1 h1{font-family: myFirstFont !important;font-weight: bold;}
+div.contents {
+
+	text-align: center;
+	height: 818px;
+}
+
+.footer-2{padding-top: 28px;}
+table.contents {
+	
+	/*padding: 50px 100px;*/
+	
+}
+.contents tr td{padding:20px;width: 290px; }
+
+.contents-right{padding-top: 100px;float: right;width: 42%;}
+
+#output tr td{width: 350px;text-align: left; font-family: myFirstFont !important;font-weight: bold;}
+.header{}
+.header .settingsection{
+	height: 217px;
+	vertical-align: middle;
+	width: 20%;
+	float: left;
+}
+.logo img{width: 500px !important;}
+.header .logo{width: 60% !important;}
+
+#clickhere_button {
+	height: 50px;
+	width: 100%;
+	background-color: #078fcc;
+	color: white;
+	font-size: xx-large;
+	border: dashed;
+}
+
