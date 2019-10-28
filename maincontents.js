@@ -152,18 +152,19 @@ function FC_LoadConfigView()
 
 function OnUserApproached()
 {	
-	window.external.RobotDanceStart(false);
+	//window.external.RobotDanceStart(false);
 	SetVolume(0.7);
-	PlaySpeech("Happy Holidays from Ingersoll Auto Group.");
+	//PlaySpeech("Happy Holidays from Ingersoll Auto Group.");
+	PlaySpeech("Test");
 	//PlaySpeech("Press any button on the screen to begin.");
 }
 
 function OnUserDisappeared()
 {
-	setTimeout(dancing(),60000);
-	function dancing(){
-		window.external.RobotDanceStart(true);
-	}
+	//setTimeout(dancing(),60000);
+	//function dancing(){
+	//	window.external.RobotDanceStart(true);
+	//}
 	/*var ran = Math.random()*3;
 	var langCnt = Math.floor(ran);
 
