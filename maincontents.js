@@ -156,11 +156,13 @@ function OnUserApproached()
 	SetVolume(0.7);
 	//PlaySpeech("Happy Holidays from Ingersoll Auto Group.");
 	PlaySpeech("Test");
+	alert("I see you");
 	//PlaySpeech("Press any button on the screen to begin.");
 }
 
 function OnUserDisappeared()
 {
+    alert("I can't see you");
 	//setTimeout(dancing(),60000);
 	//function dancing(){
 	//	window.external.RobotDanceStart(true);
